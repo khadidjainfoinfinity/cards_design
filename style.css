@@ -1,0 +1,129 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+*{
+  padding:  0;
+  margin : 0;
+  box-sizing:  border-box;
+}
+
+body{
+  min-height:  100vh;
+  width:  100%;
+  display:  flex;
+  justify-content:  center;
+  align-items:  center;
+  background: #333;
+}
+
+.container{
+  display: flex;
+  flex-flow:  row wrap;
+  justify-content:  center;
+  align-items:  center ;
+  gap:  60px;
+}
+
+.card{
+  position: relative;
+  width:  320px;
+  height:  440px;
+  background:  blueviolet;
+  border-radius:  20px;
+  border-bottom-left-radius:  200px;
+  border-bottom-right-radius:  200px;
+  box-shadow:  0 15px 0 #fff , inset 0 -15px 0 rgba(255,255,255,.4) , 0 40px 0 rgba(15,15,15,.3);
+  overflow:  hidden;
+  display:  flex;
+  justify-content:  center;
+  align-items:  flex-start;
+}
+
+.card::before{
+  content:  "";
+  position:  absolute;
+  top:  -30%;
+  left:  -33%;
+  width:  100%;
+  height:  120%;
+  background:  linear-gradient( 90deg, transparent , rgba(255,255,255,.2));
+  transform : rotate( 30deg);
+  pointer-events:  none;
+  filter: blur(2px);
+}
+
+
+.first{
+  background:  linear-gradient( to bottom ,#A0FDD3 , #A0CAFD);
+}
+
+.seconde{
+  background:  linear-gradient( to bottom ,#F683F1 , #AB83F6);
+}
+
+.last{
+  background:  linear-gradient( to bottom ,#F89079 , #FFDC8E);
+}
+
+.card .icon{
+  position:  relative;
+  top: 0;
+  width:  140px;
+  height:  110px;
+  background:  #333;
+  border-bottom-left-radius:200px;
+  border-bottom-right-radius:200px;
+  box-shadow:  0 10px 0 #fff , inset 0 -15px 0 rgba(0,0,0,.2) , 0 25px 0 rgba(15,15,15,.3);
+  display: flex;
+  justify-content:  center;
+  align-items:  center;
+}
+
+.card .icon::before{
+  content: "";
+  position:  absolute;
+  background : transparent ;
+  width:  50px;
+  height:  50px;
+  left:  -50px;
+  top:  0;
+  border-top-right-radius:  100px;
+  box-shadow:  16px -16px  0 15px #333;
+}
+
+.card .icon::after{
+  content: "";
+  position:  absolute;
+  background : transparent ;
+  width:  50px;
+  height:  50px;
+  Right:  -50px;
+  top:  0;
+  border-top-left-radius:  100px;
+  box-shadow:  -16px -16px  0 15px #333;
+}
+
+.card .icon i{
+  font-size : 70px;
+
+}
+
+.content {
+  position:  absolute;
+  padding:  50% 9%;
+  text-align:  center;
+  letter-spacing:  1px;
+}
+
+.content h2{
+  text-transform: uppercase;
+  font-size:  2rem;
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.content p{
+  margin-top:  8%;
+  font-size:  1rem;
+  line-height:  1.7;
+  font-family: 'Nunito', sans-serif;
+}
